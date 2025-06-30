@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="escuro">
+    <div class="form-wrapper">
+        <form id="cadastroForm" class="form-container">
+            <h1>Cadastro de Usuário</h1>
+            
+            <label for="nome">Usuário:</label>
+            <input type="text" id="nome" placeholder="Digite o nome" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" placeholder="Digite a senha" required>
+
+            <button type="submit">Cadastrar</button>
+
+            <p class="login-link">Já tem conta? <a href="login.html">Login</a></p>
+            <div id="mensagem"></div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('cadastroForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const dados = {
+                nome: document.getElementById('nome').value,
+                senha: document.getElementById('senha').value
+            };
+
+            // ✅ ROTA CORRIGIDA (sem /cadastrar)
+            const res = await fetch('http://localhost:3000/usuarios', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(dados)
+            });
+
+            const msg = document.getElementById('mensagem');
+            try {
+                const json = await res.json();
+                if (res.ok) {
+                    msg.innerHTML = "<p class='success'>Cadastro realizado com sucesso!</p>";
+                    setTimeout(() => window.location.href = 'login.html', 2000);
+                } else {
+                    msg.innerHTML = `<p class='error'>${json.message || 'Erro ao cadastrar.'}</p>`;
+                }
+            } catch (err) {
+                msg.innerHTML = `<p class='error'>Erro inesperado: ${err.message}</p>`;
+            }
+        });
+    </script>
+</body>
+</html>

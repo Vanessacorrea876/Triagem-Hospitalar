@@ -1,0 +1,301 @@
+nome,sexo,sintomas,comorbidades,alergias,temperatura,frequencia_cardiaca,pressao_arterial,diagnostico
+Fernanda Oliveira,feminino,dor de cabeça,asma,penicilina,39.3,82,105/72,risco_medio
+Pedro Alves,masculino,febre,diabetes,amendoim,36.1,89,127/62,risco_medio
+Patrícia Lima,masculino,tosse,diabetes,latex,36.5,63,122/92,risco_alto
+Pedro Dias,masculino,fadiga,hipertensao,penicilina,39.3,76,107/70,risco_alto
+Juliana Pereira,feminino,fadiga,diabetes,latex,36.7,72,113/74,risco_medio
+Pedro Silva,feminino,tosse,hipertensao,amendoim,37.9,90,113/79,risco_medio
+Lucas Souza,feminino,febre,diabetes,penicilina,37.4,77,121/66,risco_medio
+Fernanda Dias,feminino,fadiga,diabetes,latex,37.2,81,160/64,risco_alto
+João Dias,feminino,febre,diabetes,penicilina,37.3,88,155/74,risco_medio
+Lucas Oliveira,masculino,dor de cabeça,nenhuma,latex,36.9,63,139/74,risco_baixo
+Lucas Gomes,feminino,dor de cabeça,nenhuma,amendoim,38.8,70,125/69,risco_medio
+João Gomes,feminino,fadiga,diabetes,amendoim,39.0,64,117/92,risco_alto
+Juliana Pereira,feminino,náusea,hipertensao,nenhuma,36.6,85,101/76,risco_alto
+Ana Dias,feminino,fadiga,diabetes,penicilina,36.1,66,103/99,risco_medio
+Lucas Pereira,feminino,fadiga,hipertensao,latex,36.4,67,121/68,risco_alto
+Ana Santos,masculino,tosse,diabetes,penicilina,36.8,110,137/79,risco_medio
+Maria Santos,feminino,náusea,nenhuma,nenhuma,38.2,92,155/91,risco_alto
+Ana Santos,masculino,febre,diabetes,amendoim,37.7,70,93/79,risco_medio
+Pedro Dias,feminino,dor de cabeça,asma,penicilina,38.9,65,122/62,risco_medio
+Patrícia Gomes,feminino,febre,diabetes,amendoim,36.6,105,103/62,risco_alto
+Ana Souza,masculino,febre,nenhuma,nenhuma,37.2,110,150/71,risco_baixo
+João Souza,masculino,febre,hipertensao,penicilina,36.8,106,135/85,risco_medio
+Ana Pereira,feminino,fadiga,nenhuma,amendoim,38.0,93,145/79,risco_baixo
+Lucas Silva,masculino,fadiga,hipertensao,latex,36.4,63,96/95,risco_alto
+Fernanda Gomes,masculino,dor de cabeça,nenhuma,amendoim,38.9,94,141/88,risco_medio
+Fernanda Silva,feminino,febre,nenhuma,latex,38.7,96,129/82,risco_medio
+Lucas Gomes,feminino,tosse,nenhuma,amendoim,39.2,61,155/83,risco_medio
+Ricardo Gomes,masculino,dor de cabeça,asma,penicilina,37.6,91,120/81,risco_medio
+Ana Santos,feminino,tosse,nenhuma,nenhuma,38.0,65,147/76,risco_baixo
+Carlos Alves,feminino,náusea,diabetes,amendoim,37.9,86,99/87,risco_alto
+Lucas Alves,feminino,fadiga,nenhuma,nenhuma,37.7,84,150/69,risco_baixo
+Carlos Souza,feminino,dor de cabeça,hipertensao,penicilina,38.3,64,120/60,risco_medio
+Carlos Dias,masculino,náusea,hipertensao,amendoim,38.9,77,148/83,risco_alto
+Ricardo Souza,feminino,dor de cabeça,diabetes,latex,36.4,91,116/87,risco_alto
+Patrícia Souza,feminino,fadiga,nenhuma,nenhuma,36.4,80,140/61,risco_baixo
+João Souza,feminino,dor de cabeça,nenhuma,penicilina,36.6,96,91/64,risco_baixo
+Carlos Pereira,masculino,tosse,asma,nenhuma,36.9,108,149/88,risco_alto
+Fernanda Souza,masculino,tosse,hipertensao,amendoim,38.6,104,105/85,risco_alto
+Carlos Silva,masculino,febre,asma,nenhuma,37.6,87,158/86,risco_alto
+Ana Gomes,feminino,fadiga,asma,amendoim,37.4,79,121/81,risco_alto
+Ana Lima,feminino,fadiga,hipertensao,amendoim,36.3,66,98/97,risco_medio
+Ricardo Costa,feminino,febre,diabetes,latex,36.3,108,122/72,risco_medio
+Juliana Alves,feminino,dor de cabeça,hipertensao,penicilina,37.8,79,130/95,risco_alto
+João Oliveira,feminino,febre,hipertensao,nenhuma,37.5,71,125/81,risco_alto
+Patrícia Gomes,feminino,febre,asma,nenhuma,36.3,103,133/90,risco_medio
+Maria Silva,masculino,tosse,diabetes,nenhuma,38.1,108,92/67,risco_medio
+Fernanda Souza,masculino,fadiga,diabetes,penicilina,38.4,68,96/82,risco_alto
+Fernanda Alves,feminino,febre,hipertensao,amendoim,38.7,99,104/68,risco_medio
+Juliana Dias,masculino,dor de cabeça,diabetes,penicilina,38.7,98,116/60,risco_alto
+Ricardo Pereira,masculino,náusea,hipertensao,penicilina,37.8,86,141/78,risco_medio
+Carlos Pereira,masculino,febre,diabetes,nenhuma,36.6,77,113/99,risco_medio
+Ana Dias,feminino,fadiga,hipertensao,nenhuma,36.9,89,149/70,risco_medio
+Lucas Costa,masculino,dor de cabeça,diabetes,amendoim,37.0,109,115/67,risco_alto
+João Oliveira,masculino,tosse,diabetes,nenhuma,38.0,100,144/94,risco_alto
+Ricardo Silva,feminino,dor de cabeça,diabetes,latex,37.5,66,150/96,risco_alto
+Maria Silva,feminino,tosse,asma,nenhuma,37.7,90,94/84,risco_medio
+Carlos Pereira,feminino,tosse,nenhuma,amendoim,36.4,106,133/74,risco_baixo
+Ricardo Souza,feminino,fadiga,nenhuma,latex,37.1,61,144/88,risco_baixo
+Ana Alves,feminino,dor de cabeça,asma,amendoim,38.8,106,96/95,risco_alto
+Carlos Costa,masculino,tosse,asma,penicilina,37.8,60,143/71,risco_alto
+Pedro Souza,masculino,tosse,asma,amendoim,38.3,86,147/73,risco_alto
+João Alves,feminino,febre,asma,amendoim,38.5,103,97/80,risco_alto
+Lucas Souza,masculino,dor de cabeça,asma,amendoim,36.3,100,157/60,risco_medio
+Lucas Gomes,masculino,dor de cabeça,diabetes,amendoim,36.4,71,158/86,risco_alto
+Ricardo Alves,feminino,dor de cabeça,nenhuma,latex,38.8,73,120/84,risco_medio
+Fernanda Pereira,masculino,febre,diabetes,nenhuma,39.3,92,95/72,risco_alto
+Pedro Souza,feminino,dor de cabeça,nenhuma,nenhuma,39.3,104,130/61,risco_alto
+Ana Oliveira,masculino,fadiga,nenhuma,penicilina,36.4,96,102/81,risco_baixo
+Ana Lima,masculino,fadiga,asma,nenhuma,38.3,94,158/81,risco_medio
+Lucas Pereira,feminino,tosse,diabetes,amendoim,38.0,103,108/88,risco_alto
+Juliana Alves,feminino,febre,hipertensao,latex,39.3,100,113/77,risco_alto
+Carlos Dias,feminino,fadiga,nenhuma,latex,39.2,109,133/60,risco_medio
+Carlos Souza,masculino,náusea,asma,latex,38.6,102,130/66,risco_medio
+Juliana Silva,masculino,fadiga,nenhuma,penicilina,36.6,93,93/94,risco_baixo
+João Santos,masculino,febre,hipertensao,nenhuma,37.2,78,119/60,risco_medio
+João Souza,masculino,dor de cabeça,nenhuma,amendoim,36.1,65,143/91,risco_baixo
+Carlos Alves,masculino,febre,nenhuma,latex,36.5,82,116/90,risco_baixo
+Lucas Silva,feminino,náusea,diabetes,penicilina,39.4,107,101/79,risco_alto
+Maria Pereira,masculino,tosse,asma,penicilina,38.9,78,155/88,risco_medio
+Pedro Santos,feminino,dor de cabeça,hipertensao,nenhuma,38.6,71,105/74,risco_alto
+Carlos Dias,feminino,fadiga,nenhuma,latex,39.0,60,91/95,risco_medio
+Fernanda Lima,feminino,náusea,nenhuma,amendoim,38.6,81,115/75,risco_medio
+Pedro Pereira,feminino,fadiga,diabetes,amendoim,38.5,94,105/97,risco_alto
+Lucas Pereira,masculino,náusea,diabetes,penicilina,38.6,71,139/67,risco_medio
+Ana Souza,masculino,dor de cabeça,asma,latex,38.8,66,97/67,risco_alto
+Ricardo Silva,masculino,náusea,hipertensao,nenhuma,37.7,100,151/84,risco_medio
+Ricardo Lima,feminino,tosse,nenhuma,latex,38.9,93,112/66,risco_medio
+Juliana Lima,feminino,fadiga,asma,amendoim,39.3,68,122/65,risco_medio
+Maria Santos,feminino,tosse,diabetes,nenhuma,38.2,103,136/80,risco_alto
+Patrícia Silva,masculino,náusea,hipertensao,amendoim,39.1,87,97/85,risco_alto
+Juliana Silva,feminino,febre,nenhuma,nenhuma,39.2,101,90/70,risco_medio
+Maria Pereira,masculino,náusea,asma,nenhuma,38.4,98,144/84,risco_medio
+Ricardo Souza,masculino,tosse,diabetes,amendoim,37.3,106,116/63,risco_medio
+Maria Silva,masculino,febre,nenhuma,latex,38.7,61,147/88,risco_medio
+Maria Souza,masculino,dor de cabeça,hipertensao,latex,36.9,76,145/70,risco_medio
+Ana Costa,masculino,tosse,hipertensao,nenhuma,36.4,72,154/97,risco_medio
+Ricardo Lima,feminino,fadiga,diabetes,latex,38.5,81,156/88,risco_alto
+Fernanda Dias,feminino,dor de cabeça,diabetes,amendoim,38.6,107,106/66,risco_alto
+Fernanda Lima,feminino,febre,hipertensao,nenhuma,37.1,70,156/85,risco_alto
+Pedro Oliveira,feminino,fadiga,nenhuma,latex,37.3,104,139/82,risco_baixo
+Patrícia Costa,feminino,náusea,nenhuma,amendoim,37.9,100,142/97,risco_baixo
+Fernanda Souza,feminino,náusea,diabetes,amendoim,39.4,78,119/93,risco_medio
+Ricardo Santos,feminino,náusea,nenhuma,amendoim,38.1,80,105/92,risco_alto
+João Souza,feminino,dor de cabeça,diabetes,nenhuma,36.5,99,98/92,risco_medio
+Pedro Lima,feminino,dor de cabeça,nenhuma,penicilina,38.0,106,106/78,risco_baixo
+Ana Pereira,feminino,dor de cabeça,nenhuma,latex,37.4,83,121/87,risco_baixo
+Pedro Alves,feminino,náusea,hipertensao,amendoim,37.8,109,124/97,risco_alto
+Ricardo Santos,masculino,tosse,asma,nenhuma,37.1,65,133/76,risco_alto
+João Gomes,feminino,tosse,diabetes,latex,38.4,61,116/98,risco_medio
+Ana Silva,masculino,náusea,diabetes,amendoim,36.4,73,159/96,risco_alto
+João Pereira,masculino,náusea,hipertensao,nenhuma,37.0,63,158/80,risco_alto
+Maria Santos,feminino,tosse,asma,amendoim,38.9,107,137/95,risco_medio
+Pedro Pereira,feminino,náusea,asma,nenhuma,39.5,78,104/83,risco_alto
+Carlos Gomes,masculino,fadiga,diabetes,penicilina,36.1,82,94/80,risco_alto
+Ricardo Oliveira,feminino,tosse,nenhuma,amendoim,36.2,91,130/83,risco_baixo
+Ricardo Lima,masculino,náusea,diabetes,latex,38.2,74,127/60,risco_medio
+Maria Souza,masculino,tosse,diabetes,amendoim,38.0,78,114/63,risco_alto
+Lucas Santos,feminino,tosse,nenhuma,latex,36.1,80,151/75,risco_baixo
+João Souza,masculino,náusea,asma,nenhuma,36.4,98,115/61,risco_alto
+Ana Souza,feminino,dor de cabeça,asma,penicilina,39.4,98,120/75,risco_alto
+Fernanda Alves,masculino,náusea,hipertensao,amendoim,36.6,81,133/81,risco_medio
+Carlos Costa,masculino,febre,nenhuma,latex,36.0,89,137/87,risco_baixo
+Fernanda Lima,masculino,febre,asma,latex,36.6,101,105/61,risco_medio
+Pedro Pereira,feminino,febre,hipertensao,latex,37.6,109,151/72,risco_medio
+Fernanda Santos,masculino,fadiga,asma,nenhuma,38.9,91,145/80,risco_medio
+Lucas Silva,masculino,febre,diabetes,penicilina,39.3,62,137/82,risco_alto
+Juliana Oliveira,masculino,febre,asma,penicilina,39.2,78,138/66,risco_medio
+Pedro Costa,feminino,dor de cabeça,diabetes,amendoim,38.7,95,123/100,risco_medio
+Patrícia Pereira,feminino,fadiga,diabetes,amendoim,37.3,92,133/72,risco_alto
+João Gomes,masculino,tosse,nenhuma,amendoim,38.3,110,99/62,risco_medio
+Patrícia Souza,masculino,náusea,hipertensao,latex,37.0,82,107/79,risco_medio
+Pedro Santos,masculino,fadiga,diabetes,penicilina,38.7,96,96/98,risco_medio
+João Lima,feminino,fadiga,nenhuma,penicilina,37.6,104,124/73,risco_baixo
+Carlos Gomes,masculino,dor de cabeça,nenhuma,latex,36.0,77,99/91,risco_baixo
+Maria Alves,masculino,fadiga,nenhuma,latex,36.9,93,151/65,risco_baixo
+Carlos Lima,masculino,dor de cabeça,diabetes,nenhuma,37.4,102,118/88,risco_medio
+Ana Alves,masculino,fadiga,diabetes,nenhuma,38.4,78,94/87,risco_alto
+Carlos Gomes,masculino,náusea,hipertensao,latex,36.3,109,160/67,risco_alto
+Pedro Oliveira,feminino,febre,diabetes,penicilina,37.8,70,156/74,risco_medio
+Juliana Pereira,masculino,tosse,asma,penicilina,36.7,82,160/72,risco_alto
+Pedro Alves,masculino,febre,asma,penicilina,39.0,107,94/91,risco_medio
+Lucas Gomes,feminino,náusea,hipertensao,latex,36.4,65,157/82,risco_alto
+Maria Dias,feminino,dor de cabeça,diabetes,nenhuma,36.7,67,150/90,risco_medio
+Juliana Oliveira,feminino,náusea,nenhuma,latex,36.7,102,105/71,risco_baixo
+Lucas Gomes,feminino,tosse,nenhuma,amendoim,36.2,110,94/86,risco_baixo
+Pedro Pereira,masculino,tosse,asma,latex,36.1,86,109/62,risco_alto
+João Dias,feminino,dor de cabeça,nenhuma,amendoim,37.4,99,141/82,risco_baixo
+Carlos Silva,masculino,dor de cabeça,hipertensao,nenhuma,38.3,69,98/93,risco_alto
+Patrícia Pereira,masculino,dor de cabeça,diabetes,nenhuma,36.2,104,139/76,risco_medio
+Pedro Alves,feminino,tosse,asma,penicilina,38.1,79,142/63,risco_alto
+Fernanda Lima,masculino,náusea,asma,amendoim,36.7,92,160/98,risco_alto
+Carlos Dias,feminino,dor de cabeça,asma,penicilina,38.4,110,137/75,risco_medio
+Ana Santos,masculino,fadiga,hipertensao,nenhuma,37.5,82,149/87,risco_alto
+Ana Souza,feminino,dor de cabeça,nenhuma,nenhuma,38.9,78,130/84,risco_alto
+Patrícia Souza,feminino,tosse,nenhuma,latex,38.0,75,129/83,risco_baixo
+Juliana Silva,masculino,fadiga,asma,latex,38.8,102,148/85,risco_medio
+Ana Lima,masculino,fadiga,nenhuma,penicilina,38.5,99,95/63,risco_alto
+Patrícia Silva,masculino,tosse,nenhuma,penicilina,37.6,96,129/92,risco_baixo
+Pedro Gomes,feminino,náusea,nenhuma,amendoim,38.5,89,126/97,risco_medio
+Patrícia Pereira,masculino,tosse,hipertensao,amendoim,37.3,86,96/68,risco_alto
+Fernanda Souza,feminino,febre,diabetes,amendoim,37.3,64,126/77,risco_alto
+Patrícia Dias,feminino,náusea,hipertensao,penicilina,38.4,69,140/85,risco_alto
+Pedro Dias,feminino,febre,asma,penicilina,37.4,60,135/94,risco_alto
+Juliana Lima,feminino,dor de cabeça,nenhuma,nenhuma,39.5,98,145/74,risco_alto
+Lucas Gomes,masculino,febre,diabetes,nenhuma,37.0,99,156/75,risco_medio
+Fernanda Santos,feminino,dor de cabeça,diabetes,latex,37.5,75,123/64,risco_medio
+Fernanda Gomes,feminino,náusea,diabetes,penicilina,38.8,60,100/93,risco_medio
+Ricardo Oliveira,masculino,febre,asma,amendoim,37.1,104,97/99,risco_medio
+Fernanda Gomes,masculino,febre,diabetes,latex,36.7,78,158/66,risco_alto
+Maria Souza,masculino,febre,asma,nenhuma,38.6,110,158/69,risco_medio
+Patrícia Lima,feminino,fadiga,asma,latex,38.8,107,101/63,risco_medio
+Ana Souza,masculino,dor de cabeça,diabetes,amendoim,36.4,86,158/97,risco_medio
+Ricardo Silva,masculino,náusea,nenhuma,nenhuma,38.9,71,134/92,risco_alto
+Lucas Silva,feminino,dor de cabeça,hipertensao,penicilina,36.9,102,92/81,risco_medio
+Ricardo Dias,feminino,náusea,diabetes,amendoim,37.0,109,114/60,risco_alto
+Patrícia Pereira,masculino,dor de cabeça,hipertensao,nenhuma,37.8,98,155/100,risco_alto
+Ricardo Santos,masculino,náusea,nenhuma,amendoim,39.2,98,150/71,risco_alto
+Ricardo Santos,masculino,náusea,nenhuma,latex,37.9,65,148/79,risco_baixo
+Patrícia Oliveira,masculino,febre,asma,latex,37.5,92,139/97,risco_alto
+Maria Lima,feminino,febre,asma,amendoim,38.2,108,96/77,risco_medio
+Juliana Oliveira,feminino,dor de cabeça,asma,amendoim,39.3,76,102/78,risco_medio
+Fernanda Pereira,masculino,febre,nenhuma,penicilina,38.0,109,123/76,risco_baixo
+Ana Santos,feminino,febre,asma,penicilina,37.6,72,147/67,risco_medio
+Juliana Souza,masculino,fadiga,hipertensao,amendoim,38.5,93,133/61,risco_alto
+Juliana Gomes,masculino,fadiga,asma,nenhuma,38.7,62,128/81,risco_alto
+Patrícia Pereira,feminino,náusea,hipertensao,amendoim,36.5,69,98/94,risco_alto
+Juliana Souza,masculino,náusea,nenhuma,penicilina,36.7,78,158/80,risco_baixo
+Patrícia Pereira,masculino,tosse,nenhuma,penicilina,37.9,70,122/90,risco_baixo
+Ana Oliveira,feminino,dor de cabeça,diabetes,penicilina,38.0,99,119/73,risco_alto
+Juliana Pereira,masculino,febre,nenhuma,latex,38.7,93,111/100,risco_alto
+João Costa,feminino,febre,asma,nenhuma,37.9,89,128/94,risco_medio
+Fernanda Souza,masculino,fadiga,diabetes,penicilina,36.8,97,111/73,risco_alto
+Pedro Lima,feminino,febre,hipertensao,latex,36.0,84,105/87,risco_alto
+Ricardo Pereira,masculino,tosse,nenhuma,nenhuma,38.7,80,118/90,risco_medio
+Pedro Souza,feminino,dor de cabeça,diabetes,penicilina,36.7,70,150/87,risco_alto
+Ricardo Pereira,feminino,náusea,hipertensao,nenhuma,39.1,82,126/60,risco_medio
+Pedro Gomes,feminino,febre,nenhuma,penicilina,37.0,61,148/71,risco_baixo
+Fernanda Alves,feminino,náusea,nenhuma,nenhuma,39.3,76,101/84,risco_alto
+João Oliveira,masculino,dor de cabeça,nenhuma,penicilina,37.5,87,130/100,risco_baixo
+Carlos Dias,feminino,febre,diabetes,latex,36.8,108,129/93,risco_medio
+Patrícia Santos,feminino,tosse,nenhuma,amendoim,38.7,74,154/96,risco_medio
+Patrícia Costa,masculino,febre,hipertensao,penicilina,39.4,101,133/65,risco_alto
+Ricardo Silva,feminino,febre,diabetes,amendoim,39.2,74,143/70,risco_medio
+João Dias,feminino,dor de cabeça,asma,latex,38.8,91,91/83,risco_alto
+Carlos Silva,masculino,febre,hipertensao,latex,39.1,95,134/77,risco_alto
+Maria Souza,masculino,fadiga,diabetes,penicilina,37.0,75,92/95,risco_medio
+Fernanda Santos,feminino,fadiga,diabetes,amendoim,39.5,63,142/85,risco_alto
+João Pereira,masculino,náusea,hipertensao,penicilina,36.2,101,160/92,risco_medio
+Fernanda Santos,feminino,náusea,hipertensao,penicilina,37.9,83,116/95,risco_alto
+Maria Costa,feminino,dor de cabeça,hipertensao,latex,36.0,76,108/62,risco_alto
+Pedro Lima,masculino,dor de cabeça,diabetes,amendoim,37.9,63,102/71,risco_alto
+Fernanda Gomes,feminino,tosse,diabetes,amendoim,38.5,72,128/78,risco_alto
+Ricardo Souza,masculino,dor de cabeça,hipertensao,latex,38.6,67,137/75,risco_alto
+João Santos,feminino,febre,hipertensao,penicilina,38.2,89,110/66,risco_medio
+Juliana Oliveira,feminino,dor de cabeça,diabetes,amendoim,39.3,66,91/86,risco_alto
+Fernanda Gomes,feminino,febre,asma,amendoim,38.6,98,95/82,risco_alto
+João Costa,feminino,náusea,nenhuma,penicilina,38.5,96,146/91,risco_alto
+João Gomes,feminino,náusea,asma,amendoim,38.5,60,97/61,risco_alto
+Carlos Santos,masculino,dor de cabeça,nenhuma,nenhuma,37.2,98,156/97,risco_baixo
+Juliana Lima,masculino,dor de cabeça,diabetes,latex,36.8,88,143/85,risco_alto
+Juliana Alves,feminino,tosse,nenhuma,penicilina,37.9,70,97/76,risco_baixo
+Carlos Dias,masculino,dor de cabeça,hipertensao,amendoim,38.2,106,90/93,risco_alto
+Patrícia Dias,masculino,tosse,nenhuma,penicilina,38.2,76,129/78,risco_medio
+Juliana Silva,masculino,tosse,hipertensao,amendoim,37.2,97,103/100,risco_alto
+Patrícia Silva,masculino,dor de cabeça,nenhuma,nenhuma,39.1,96,113/94,risco_alto
+Ana Gomes,feminino,febre,hipertensao,nenhuma,37.7,97,144/88,risco_alto
+João Silva,feminino,fadiga,nenhuma,nenhuma,36.2,60,113/98,risco_baixo
+João Dias,feminino,febre,hipertensao,latex,38.6,77,111/69,risco_medio
+Ana Lima,masculino,febre,diabetes,nenhuma,38.1,105,148/77,risco_alto
+Ana Dias,masculino,tosse,hipertensao,nenhuma,38.1,83,105/88,risco_medio
+Patrícia Souza,masculino,náusea,diabetes,amendoim,37.5,88,144/92,risco_medio
+Patrícia Lima,feminino,náusea,hipertensao,amendoim,37.0,92,139/74,risco_medio
+Patrícia Costa,masculino,náusea,hipertensao,latex,38.7,90,108/80,risco_medio
+Lucas Pereira,masculino,tosse,nenhuma,nenhuma,38.5,72,136/91,risco_alto
+João Dias,feminino,dor de cabeça,nenhuma,latex,36.5,106,141/60,risco_baixo
+Ana Dias,masculino,tosse,hipertensao,latex,36.7,65,95/90,risco_medio
+Lucas Oliveira,feminino,náusea,nenhuma,nenhuma,39.4,110,124/63,risco_alto
+Pedro Lima,masculino,dor de cabeça,asma,nenhuma,36.9,105,136/67,risco_alto
+Pedro Santos,feminino,náusea,diabetes,penicilina,37.8,75,157/66,risco_alto
+João Dias,feminino,febre,diabetes,latex,36.9,66,99/95,risco_medio
+Pedro Costa,feminino,fadiga,hipertensao,penicilina,36.0,63,153/76,risco_medio
+João Costa,masculino,tosse,hipertensao,penicilina,37.3,74,143/96,risco_alto
+Lucas Dias,feminino,fadiga,hipertensao,latex,37.3,107,125/71,risco_alto
+Pedro Souza,feminino,febre,nenhuma,penicilina,37.5,70,91/71,risco_baixo
+Fernanda Oliveira,masculino,dor de cabeça,hipertensao,latex,39.1,99,141/99,risco_alto
+Pedro Pereira,masculino,tosse,diabetes,nenhuma,38.6,95,108/67,risco_medio
+João Souza,masculino,dor de cabeça,asma,penicilina,39.4,87,152/99,risco_alto
+Carlos Silva,masculino,tosse,hipertensao,amendoim,37.5,78,94/91,risco_alto
+Carlos Pereira,masculino,náusea,nenhuma,penicilina,36.8,109,136/96,risco_baixo
+Carlos Dias,feminino,náusea,diabetes,latex,39.4,82,92/93,risco_alto
+Fernanda Costa,masculino,dor de cabeça,hipertensao,latex,38.8,71,114/70,risco_alto
+Carlos Costa,feminino,náusea,hipertensao,amendoim,37.9,73,146/87,risco_medio
+Carlos Costa,feminino,febre,hipertensao,penicilina,37.3,73,105/74,risco_medio
+Carlos Dias,masculino,febre,diabetes,penicilina,39.5,80,110/71,risco_alto
+Fernanda Silva,masculino,fadiga,hipertensao,amendoim,37.8,84,144/68,risco_medio
+Pedro Santos,feminino,náusea,diabetes,penicilina,38.3,96,121/86,risco_medio
+Maria Gomes,feminino,tosse,hipertensao,latex,37.4,74,136/78,risco_alto
+Ricardo Silva,masculino,tosse,asma,nenhuma,37.9,102,146/78,risco_alto
+Juliana Dias,feminino,tosse,asma,penicilina,37.7,76,150/78,risco_medio
+Lucas Dias,feminino,tosse,hipertensao,latex,39.3,61,103/68,risco_alto
+Carlos Santos,feminino,tosse,diabetes,latex,36.5,74,103/61,risco_medio
+Patrícia Oliveira,masculino,tosse,asma,nenhuma,39.0,85,94/74,risco_alto
+Juliana Silva,masculino,febre,nenhuma,latex,36.0,94,99/60,risco_baixo
+Lucas Oliveira,feminino,dor de cabeça,asma,penicilina,36.5,64,116/95,risco_medio
+Maria Santos,masculino,náusea,asma,latex,38.6,64,96/63,risco_alto
+Ana Alves,feminino,náusea,asma,nenhuma,39.2,89,133/92,risco_alto
+Juliana Santos,feminino,fadiga,nenhuma,latex,37.1,95,119/99,risco_baixo
+Juliana Silva,masculino,náusea,asma,penicilina,36.5,95,122/95,risco_medio
+Patrícia Dias,masculino,dor de cabeça,nenhuma,latex,38.8,81,99/78,risco_alto
+Juliana Alves,feminino,dor de cabeça,asma,nenhuma,38.3,89,101/84,risco_medio
+João Santos,masculino,náusea,asma,nenhuma,36.5,64,106/64,risco_medio
+Lucas Alves,feminino,tosse,nenhuma,penicilina,38.2,105,159/91,risco_medio
+Fernanda Alves,feminino,febre,diabetes,latex,37.9,94,112/86,risco_medio
+Maria Pereira,masculino,dor de cabeça,diabetes,penicilina,36.8,75,114/82,risco_medio
+Pedro Santos,masculino,fadiga,hipertensao,penicilina,39.1,64,111/64,risco_medio
+Carlos Gomes,masculino,náusea,hipertensao,penicilina,38.5,79,144/63,risco_medio
+Ricardo Souza,masculino,náusea,hipertensao,latex,37.1,79,109/94,risco_alto
+Lucas Silva,masculino,febre,asma,latex,36.3,79,98/62,risco_alto
+Patrícia Santos,feminino,náusea,asma,latex,38.4,81,118/62,risco_alto
+Patrícia Santos,feminino,fadiga,nenhuma,nenhuma,36.5,88,145/81,risco_baixo
+Fernanda Silva,masculino,dor de cabeça,diabetes,penicilina,36.3,89,159/85,risco_alto
+Patrícia Lima,masculino,tosse,diabetes,penicilina,37.4,85,103/84,risco_alto
+Juliana Silva,feminino,dor de cabeça,hipertensao,amendoim,38.1,109,136/77,risco_medio
+Juliana Pereira,masculino,fadiga,hipertensao,amendoim,37.3,90,102/67,risco_alto
+João Lima,masculino,tosse,nenhuma,amendoim,36.7,89,160/83,risco_baixo
+Ana Alves,feminino,náusea,asma,latex,38.6,104,130/65,risco_medio
+Patrícia Alves,masculino,febre,asma,penicilina,37.1,108,135/80,risco_alto
+Lucas Souza,masculino,dor de cabeça,asma,latex,36.7,69,157/100,risco_medio
+Patrícia Pereira,feminino,tosse,nenhuma,nenhuma,39.1,98,113/79,risco_medio
+Pedro Pereira,masculino,náusea,diabetes,latex,37.0,110,139/85,risco_medio
+Patrícia Gomes,feminino,tosse,nenhuma,latex,38.2,75,115/62,risco_alto
+Ricardo Silva,feminino,fadiga,hipertensao,latex,39.3,93,120/73,risco_medio
+Ricardo Gomes,masculino,fadiga,hipertensao,penicilina,38.6,99,145/87,risco_alto
+João Santos,masculino,náusea,hipertensao,amendoim,38.9,68,124/61,risco_alto
+Patrícia Pereira,masculino,tosse,asma,penicilina,36.9,83,127/60,risco_alto
+Patrícia Lima,feminino,dor de cabeça,nenhuma,penicilina,37.9,106,136/69,risco_baixo
+Pedro Gomes,masculino,tosse,hipertensao,amendoim,39.2,70,156/79,risco_medio
+Ricardo Santos,masculino,fadiga,hipertensao,penicilina,37.2,63,146/75,risco_alto
+Fernanda Oliveira,feminino,dor de cabeça,diabetes,nenhuma,38.8,101,122/87,risco_alto
+Fernanda Dias,masculino,dor de cabeça,asma,penicilina,37.6,86,127/60,risco_medio

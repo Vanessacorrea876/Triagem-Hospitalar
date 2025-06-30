@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Buscar Pacientes</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: #333;
+      padding: 40px 10px;
+      min-height: 100vh;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: white;
+      font-size: 32px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    }
+    .search-box {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      display: flex;
+      gap: 10px;
+    }
+    .search-box input {
+      flex: 1;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .search-box button {
+      padding: 12px 20px;
+      font-size: 16px;
+      background-color: #005fcc;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .search-box button:hover {
+      background-color: #004299;
+    }
+    #mensagem {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 10px;
+      color: white;
+      text-shadow: 0 0 5px rgba(0,0,0,0.7);
+    }
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+      padding: 20px;
+      line-height: 1.6;
+      color: #1f2937;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+    }
+    .card strong {
+      display: inline-block;
+      width: 130px;
+      color: #111827;
+    }
+    .card button {
+      margin-top: 15px;
+      margin-right: 10px;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      color: white;
+      transition: background-color 0.3s;
+    }
+    .btn-editar {
+      background-color: #2563eb;
+    }
+    .btn-editar:hover {
+      background-color: #1e40af;
+    }
+    .btn-excluir {
+      background-color: #dc2626;
+    }
+    .btn-excluir:hover {
+      background-color: #991b1b;
+    }
+  </style>
+</head>
+<body>
+  <h1>Buscar Pacientes</h1>
+
+  <div class="search-box">
+    <input type="text" id="inputBusca" placeholder="Digite nome ou cartão SUS" />
+    <button id="btnBuscar">Buscar</button>
+    <button onclick="buscarTodos()">Ver Todos</button>
+  </div>
+
+  <div id="mensagem"></div>
+  <div class="cards-container" id="resultadoBusca"></div>
+
+  <script>
+    const token = localStorage.getItem('token');
+    if (!token) {
+      alert('Você precisa estar logado para acessar esta página.');
+      window.location.href = 'login.html';
+    }
+
+    const isAdmin = true;
+
+    document.getElementById('btnBuscar').addEventListener('click', buscar);
+    document.getElementById('inputBusca').addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') buscar();
+    });
+
+    async function buscar() {
+      const termo = document.getElementById('inputBusca').value.trim();
+      const container = document.getElementById('resultadoBusca');
+      const mensagem = document.getElementById('mensagem');
+      container.innerHTML = '';
+
+      if (!termo) {
+        mensagem.textContent = 'Digite algo para buscar.';
+        return;
+      }
+
+      mensagem.textContent = 'Buscando...';
+
+      try {
+        let response;
+
+        // Se for número, busca por Cartão SUS
+        if (/^\d+$/.test(termo)) {
+          response = await fetch(`http://localhost:3000/pacientes/buscar/${termo}`, {
+            headers: { 'Authorization': 'Bearer ' + token }
+          });
+
+          if (response.ok) {
+            const paciente = await response.json();
+            await mostrarPacientes({ ok: true, json: async () => [paciente] }); // adapta p/ array
+          } else {
+            mensagem.textContent = 'Paciente não encontrado pelo Cartão SUS.';
+          }
+
+        } else {
+          // Caso contrário, busca por nome
+          response = await fetch(`http://localhost:3000/pacientes?nome=${encodeURIComponent(termo)}`, {
+            headers: { 'Authorization': 'Bearer ' + token }
+          });
+
+          await mostrarPacientes(response);
+        }
+      } catch (error) {
+        mensagem.textContent = `Erro: ${error.message}`;
+      }
+    }
+
+    async function buscarTodos() {
+      const mensagem = document.getElementById('mensagem');
+      const container = document.getElementById('resultadoBusca');
+      container.innerHTML = '';
+      mensagem.textContent = 'Buscando todos os pacientes...';
+
+      try {
+        const response = await fetch(`http://localhost:3000/pacientes`, {
+          headers: { 'Authorization': 'Bearer ' + token }
+        });
+
+        await mostrarPacientes(response);
+      } catch (error) {
+        mensagem.textContent = `Erro: ${error.message}`;
+      }
+    }
+
+    async function mostrarPacientes(response) {
+      const container = document.getElementById('resultadoBusca');
+      const mensagem = document.getElementById('mensagem');
+
+      if (!response.ok) throw new Error('Erro ao buscar pacientes');
+      const pacientes = await response.json();
+
+      if (!pacientes || pacientes.length === 0) {
+        mensagem.textContent = 'Nenhum paciente encontrado.';
+        return;
+      }
+
+      mensagem.textContent = '';
+
+      pacientes.forEach(paciente => {
+        const card = document.createElement('div');
+        card.className = 'card';
+
+        card.innerHTML = `
+          <p><strong>Nome:</strong> ${paciente.nome}</p>
+          <p><strong>Idade:</strong> ${paciente.idade}</p>
+          <p><strong>Sexo:</strong> ${paciente.sexo}</p>
+          <p><strong>Cartão SUS:</strong> ${paciente.cartaoSUS}</p>
+          <p><strong>Temperatura (°C):</strong> ${paciente.temperaturaCorporal}</p>
+          <p><strong>Pressão Arterial:</strong> ${paciente.pressaoArterial}</p>
+          <p><strong>Saturação O²:</strong> ${paciente.saturacaoOxigenio}</p>
+          <p><strong>Frequência Cardíaca:</strong> ${paciente.frequenciaCardiaca}</p>
+          <p><strong>Sintomas:</strong> ${paciente.sintomas ? paciente.sintomas.join(', ') : ''}</p>
+          <p><strong>Risco:</strong> ${paciente.risco || 'Indefinido'}</p>
+          <p><strong>Motivo:</strong> ${paciente.motivo || 'Sem motivo'}</p>
+
+          <button class="btn-editar">Editar</button>
+          ${isAdmin ? '<button class="btn-excluir">Excluir</button>' : ''}
+        `;
+
+        card.querySelector('.btn-editar').addEventListener('click', () => {
+          window.location.href = `formulario.html?id=${paciente._id}`;
+        });
+
+        if (isAdmin) {
+          card.querySelector('.btn-excluir').addEventListener('click', async () => {
+            if (confirm(`Confirma exclusão do paciente ${paciente.nome}?`)) {
+              try {
+                const res = await fetch(`http://localhost:3000/triagem/${paciente._id}`, {
+                  method: 'DELETE',
+                  headers: { Authorization: 'Bearer ' + token }
+                });
+                if (res.ok) {
+                  alert('Paciente excluído com sucesso.');
+                  buscarTodos();
+                } else {
+                  alert('Erro ao excluir paciente.');
+                }
+              } catch (err) {
+                alert('Erro na conexão: ' + err.message);
+              }
+            }
+          });
+        }
+
+        container.appendChild(card);
+      });
+    }
+  </script>
+</body>
+</html>

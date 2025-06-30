@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="escuro">
+  <div class="form-wrapper">
+    <form id="loginForm" class="form-container">
+      <h1>Login</h1>
+      <label for="nome">Usuário:</label>
+      <input type="text" id="nome" placeholder="Nome de usuário" required />
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" placeholder="Senha" required />
+      <button type="submit">Entrar</button>
+      <p class="login-link">Não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+      <div id="mensagem"></div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const msg = document.getElementById('mensagem');
+      msg.innerHTML = '';
+
+      const nome = document.getElementById('nome').value.trim();
+      const senha = document.getElementById('senha').value.trim();
+
+      if (!nome || !senha) {
+        msg.innerHTML = '<p class="error">Preencha todos os campos.</p>';
+        return;
+      }
+
+      try {
+        // ✅ ROTA CORRIGIDA
+        const res = await fetch('http://localhost:3000/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ nome, senha })
+        });
+
+        const json = await res.json();
+
+        if (res.ok) {
+          localStorage.setItem('token', json.token);
+          localStorage.setItem('usuarioLogado', json.nome);
+          window.location.href = 'formulario.html';
+        } else {
+          msg.innerHTML = `<p class="error">${json.message || 'Usuário ou senha inválidos.'}</p>`;
+        }
+      } catch (error) {
+        msg.innerHTML = '<p class="error">Erro na conexão. Tente novamente mais tarde.</p>';
+        console.error('Erro no login:', error);
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+/* Reset e base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: #222; /* escureci um pouco a cor padrão para melhor leitura */
+}
+
+/* Centralização */
+.main-wrapper,
+.form-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Caixa de conteúdo */
+.container,
+.form-container {
+    width: 100%;
+    max-width: 700px; /* aumentei para dar mais espaço */
+    background: #fff;
+    padding: 50px 50px; /* aumentei o padding */
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Estilo título */
+h1 {
+    font-size: 36px; /* maior tamanho */
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #111;
+}
+
+/* Inputs e selects */
+input, select, textarea {
+    width: 100%;
+    padding: 18px; /* maior área clicável */
+    margin-bottom: 25px;
+    border-radius: 10px;
+    border: 1px solid #bbb;
+    font-size: 18px;
+    background-color: #f0f4f8;
+    color: #111;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #0072ff;
+    outline: none;
+}
+
+/* Botões */
+button {
+    width: 100%;
+    padding: 18px;
+    background-color: #0072ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005fcc;
+}
+
+/* Links */
+a {
+    color: #0072ff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Mensagens */
+.success {
+    color: #28a745; /* verde vivo */
+    margin-top: 15px;
+    font-weight: 600;
+}
+.error {
+    color: #dc3545; /* vermelho vivo */
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+/* Link para login ou cadastro */
+.login-link {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #444;
+}
+
+/* Tema escuro */
+body.escuro {
+    background-color: #0d1b2a;
+    color: #f1f1f1;
+}
+
+body.escuro h1 {
+    color: #e0e0e0;
+}
+
+body.escuro .container,
+body.escuro .form-container {
+    background: #14263d;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8);
+    color: #e0e0e0;
+}
+
+body.escuro input, 
+body.escuro select,
+body.escuro textarea {
+    background-color: #1f3050;
+    color: #eee;
+    border: 1px solid #2a4888;
+}
+
+body.escuro input:focus, 
+body.escuro select:focus,
+body.escuro textarea:focus {
+    border-color: #4e89ff;
+}
+
+body.escuro button {
+    background-color: #3a5bdc;
+}
+
+body.escuro button:hover {
+    background-color: #2747a1;
+}
+
+body.escuro a {
+    color: #7daaff;
+}
+
+/* Busca de pacientes */
+.search-box {
+    display: flex;
+    gap: 10px;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 16px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+/* Cards de pacientes */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    color: #1f2937;
+}
+
+.card strong {
+    display: inline-block;
+    width: 140px;
+    color: #111827;
+}
+
+.card button {
+    margin-top: 20px;
+    margin-right: 12px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-editar {
+    background-color: #2563eb;
+    color: white;
+}
+
+.btn-excluir {
+    background-color: #dc2626;
+    color: white;
+}

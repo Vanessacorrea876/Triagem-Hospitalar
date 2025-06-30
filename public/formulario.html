@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<title>Formulário de Triagem</title>
+<style>
+    /* Seu CSS original */
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #4a90e2, #2a62b8);
+        font-family: Arial, sans-serif;
+        color: white;
+    }
+    .container {
+        max-width: 1300px;
+        width: 95vw;
+        margin: 60px auto;
+        padding: 40px 60px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        background: transparent;
+        overflow-y: auto;
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 40px;
+    }
+    form label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 6px;
+        font-size: 1.2rem;
+        color: white;
+    }
+    form input[type="text"],
+    form input[type="number"],
+    form input[type="email"],
+    form select,
+    form textarea {
+        width: 100%;
+        padding: 12px;
+        border-radius: 6px;
+        border: none;
+        font-size: 1.1rem;
+        box-sizing: border-box;
+        color: black;
+        background-color: #f0f4f8;
+    }
+    form textarea {
+        resize: vertical;
+        min-height: 80px;
+    }
+    #dataHora {
+        background-color: #f0f4f8;
+        color: black;
+        cursor: not-allowed;
+        border-radius: 6px;
+        padding: 12px;
+        border: none;
+        font-size: 1.1rem;
+        width: 100%;
+        box-sizing: border-box;
+        grid-column: span 2;
+    }
+    #btns-acoes {
+        grid-column: span 2;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+    form button {
+        background: #1c3d72;
+        color: white;
+        padding: 15px;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s;
+        min-width: 120px;
+    }
+    form button:hover {
+        background: #1556a2;
+    }
+    #resultado {
+        margin-top: 20px;
+        grid-column: span 2;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        white-space: pre-line; /* para quebrar linha no texto do diagnóstico */
+        min-height: 80px;
+        border: 1px solid #ccc;
+        padding: 15px;
+        border-radius: 6px;
+        background-color: rgba(255 255 255 / 0.15);
+    }
+    #resultado .success {
+        color: #b4f7b4;
+    }
+    #resultado .error {
+        color: #ffb4b4;
+    }
+</style>
+</head>
+<body>    
+    <div class="container">
+        <h1>Formulário de Atendimento ao Paciente</h1>
+        <form id="formTriagem">
+
+            <!-- Seus inputs seguem iguais -->
+            <div>
+                <label for="nome">Nome do Paciente:</label>
+                <input type="text" id="nome" required />
+            </div>
+
+            <div>
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" required />
+            </div>
+
+            <div>
+                <label for="sexo">Sexo:</label>
+                <select id="sexo" required>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="cartaoSUS">Cartão SUS:</label>
+                <input type="text" id="cartaoSUS" required />
+            </div>
+
+            <div>
+                <label for="alergias">Alergias: (selecione uma ou mais)</label>
+                <select id="alergias" multiple size="4" required>
+                    <option value="nenhuma">Nenhuma</option>
+                    <option value="penicilina">Penicilina</option>
+                    <option value="amendoim">Amendoim</option>
+                    <option value="latex">Látex</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="contatoEmergencia">Contato de Emergência:</label>
+                <input type="text" id="contatoEmergencia" />
+            </div>
+
+            <div>
+                <label for="pressaoArterial">Pressão Arterial (ex: 120/80):</label>
+                <input type="text" id="pressaoArterial" required />
+            </div>
+
+            <div>
+                <label for="saturacaoOxigenio">Saturação O²:</label>
+                <input type="number" id="saturacaoOxigenio" required />
+            </div>
+
+            <div>
+                <label for="temperaturaCorporal">Temperatura (°C):</label>
+                <input type="number" step="0.1" id="temperaturaCorporal" required />
+            </div>
+
+            <div>
+                <label for="frequenciaCardiaca">Frequência Cardíaca:</label>
+                <input type="number" id="frequenciaCardiaca" required />
+            </div>
+
+            <div>
+                <label for="comorbidades">Comorbidades: (selecione uma ou mais)</label>
+                <select id="comorbidades" multiple size="4" required>
+                    <option value="nenhuma">Nenhuma</option>
+                    <option value="diabetes">Diabetes</option>
+                    <option value="hipertensao">Hipertensão</option>
+                    <option value="asma">Asma</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="usoMedicamento">Uso de Medicamentos:</label>
+                <input type="text" id="usoMedicamento" />
+            </div>
+
+            <div>
+                <label for="email">Email do Paciente:</label>
+                <input type="email" id="email" />
+            </div>
+
+            <div>
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" />
+            </div>
+
+            <div>
+                <label for="sintomas">Sintomas: (selecione uma ou mais)</label>
+                <select id="sintomas" multiple size="5" required>
+                    <option value="tosse">Tosse</option>
+                    <option value="febre">Febre</option>
+                    <option value="dor de cabeça">Dor de cabeça</option>
+                    <option value="náusea">Náusea</option>
+                    <option value="fadiga">Fadiga</option>
+                </select>
+            </div>
+
+            <label for="dataHora">Data e Hora do Cadastro:</label>
+            <input type="text" id="dataHora" readonly />
+
+            <!-- Campo Diagnóstico -->
+            <label for="diagnostico">Diagnóstico:</label>
+            <textarea id="diagnostico" readonly style="grid-column: span 2; background-color: #e1e1e1; color: #000; min-height: 120px; padding: 12px; border-radius: 6px;"></textarea>
+
+            <div id="btns-acoes">
+                <button type="submit" id="btnEnviar">Enviar</button>
+                <button type="button" id="btnDiagnostico">Diagnóstico</button>
+                <button type="button" id="btnCancelar" style="display: none;">Cancelar</button>
+            </div>
+        </form>
+
+        <!-- DIV ADICIONADA AQUI -->
+        <div id="resultado"></div>
+    </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+        window.location.href = 'login.html';
+        return;
+    }
+
+    const form = document.getElementById('formTriagem');
+    const resultadoDiv = document.getElementById('resultado');
+    const btnEnviar = document.getElementById('btnEnviar');
+    const btnCancelar = document.getElementById('btnCancelar');
+    const btnDiagnostico = document.getElementById('btnDiagnostico');
+    const diagnosticoField = document.getElementById('diagnostico');
+    const idPaciente = new URLSearchParams(window.location.search).get('id');
+
+    // Atualiza data e hora atual
+    document.getElementById('dataHora').value = new Date().toLocaleString();
+
+    // Função para limpar seleção "nenhuma" se outras opções forem escolhidas
+    function limparNenhumaSelecionada(arr) {
+        if (arr.includes('nenhuma') && arr.length > 1) {
+            return arr.filter(v => v !== 'nenhuma');
+        }
+        return arr;
+    }
+
+    if (idPaciente) {
+        document.querySelector('h1').textContent = 'Editar Paciente';
+        btnEnviar.textContent = 'Salvar';
+        btnCancelar.style.display = 'inline-block';
+        diagnosticoField.value = 'Carregando dados do paciente...';
+
+        btnCancelar.addEventListener('click', () => {
+            window.location.href = 'pesquisar-pacientes.html';
+        });
+
+        try {
+            const res = await fetch(`http://localhost:3000/triagem/${idPaciente}`, {
+                headers: { Authorization: 'Bearer ' + token }
+            });
+            if (!res.ok) throw new Error('Paciente não encontrado');
+            const paciente = await res.json();
+
+            form.nome.value = paciente.nome || '';
+            form.idade.value = paciente.idade || '';
+            form.sexo.value = paciente.sexo || '';
+            form.cartaoSUS.value = paciente.cartaoSUS || '';
+
+            function preencherSelectMultiplo(selectElement, valores) {
+                Array.from(selectElement.options).forEach(opt => {
+                    opt.selected = valores.includes(opt.value);
+                });
+            }
+
+            preencherSelectMultiplo(form.alergias, paciente.alergias || []);
+            form.contatoEmergencia.value = paciente.contatoEmergencia || '';
+            form.pressaoArterial.value = paciente.pressaoArterial || '';
+            form.saturacaoOxigenio.value = paciente.saturacaoOxigenio || '';
+            form.temperaturaCorporal.value = paciente.temperaturaCorporal || '';
+            form.frequenciaCardiaca.value = paciente.frequenciaCardiaca || '';
+            preencherSelectMultiplo(form.comorbidades, paciente.comorbidades || []);
+            form.usoMedicamento.value = paciente.usoMedicamento || '';
+            form.email.value = paciente.email || '';
+            form.endereco.value = paciente.endereco || '';
+            preencherSelectMultiplo(form.sintomas, paciente.sintomas || []);
+
+            const camposBloqueados = [
+                'cartaoSUS', 'alergias', 'pressaoArterial', 'saturacaoOxigenio',
+                'temperaturaCorporal', 'frequenciaCardiaca', 'comorbidades',
+                'usoMedicamento', 'email', 'sintomas'
+            ];
+            camposBloqueados.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.disabled = true;
+            });
+
+            diagnosticoField.value = '';
+        } catch (error) {
+            diagnosticoField.value = `Erro: ${error.message}`;
+        }
+    }
+
+    // Função que coleta dados do formulário e prepara o objeto para IA
+    function prepararDadosIA() {
+        function coletarValoresSelecionados(selectElement) {
+            return Array.from(selectElement.selectedOptions).map(opt => opt.value);
+        }
+
+        let alergias = limparNenhumaSelecionada(coletarValoresSelecionados(form.alergias));
+        let comorbidades = limparNenhumaSelecionada(coletarValoresSelecionados(form.comorbidades));
+
+        return {
+            sexo: form.sexo.value.toLowerCase(),
+            sintomas: coletarValoresSelecionados(form.sintomas).map(s => s.toLowerCase()),
+            comorbidades: comorbidades.map(c => c.toLowerCase()),
+            alergias: alergias.map(a => a.toLowerCase()),
+            temperatura: Number(form.temperaturaCorporal.value),
+            pressao_sistolica: (() => {
+                const pa = form.pressaoArterial.value.split('/');
+                return pa.length === 2 ? Number(pa[0].trim()) : 0;
+            })(),
+            pressao_diastolica: (() => {
+                const pa = form.pressaoArterial.value.split('/');
+                return pa.length === 2 ? Number(pa[1].trim()) : 0;
+            })(),
+            frequencia_cardiaca: Number(form.frequenciaCardiaca.value),
+        };
+    }
+
+    // BOTÃO DIAGNÓSTICO - chama API da IA, sem salvar no banco
+    btnDiagnostico.addEventListener('click', async () => {
+        diagnosticoField.value = 'Consultando diagnóstico...';
+
+        try {
+            const dadosIA = prepararDadosIA();
+
+            const res = await fetch('http://localhost:5000/diagnostico', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(dadosIA)
+            });
+
+            if (!res.ok) throw new Error('Erro na API de diagnóstico');
+
+            const json = await res.json();
+
+            diagnosticoField.value = `Risco: ${json.risco || 'Indefinido'}\nMotivo: ${json.motivo || 'Sem motivo'}`;
+        } catch (error) {
+            diagnosticoField.value = `Erro: ${error.message}`;
+        }
+    });
+
+    // FORMULÁRIO - enviar e salvar no banco, exibir diagnóstico no campo
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        resultadoDiv.textContent = '';
+        diagnosticoField.value = '';
+
+        function coletarValoresSelecionados(selectElement) {
+            return Array.from(selectElement.selectedOptions).map(opt => opt.value);
+        }
+
+        let alergias = limparNenhumaSelecionada(coletarValoresSelecionados(form.alergias));
+        let comorbidades = limparNenhumaSelecionada(coletarValoresSelecionados(form.comorbidades));
+
+        const dadosFormulario = {
+            nome: form.nome.value.trim(),
+            idade: Number(form.idade.value),
+            sexo: form.sexo.value,
+            cartaoSUS: form.cartaoSUS.value.trim(),
+            alergias,
+            contatoEmergencia: form.contatoEmergencia.value.trim(),
+            pressaoArterial: form.pressaoArterial.value.trim(),
+            saturacaoOxigenio: Number(form.saturacaoOxigenio.value),
+            temperaturaCorporal: Number(form.temperaturaCorporal.value),
+            frequenciaCardiaca: Number(form.frequenciaCardiaca.value),
+            comorbidades,
+            usoMedicamento: form.usoMedicamento.value.trim(),
+            email: form.email.value.trim(),
+            endereco: form.endereco.value.trim(),
+            sintomas: coletarValoresSelecionados(form.sintomas),
+            dataHora: new Date().toISOString()
+        };
+
+        try {
+            let url = 'http://localhost:3000/pacientes';
+            let method = 'POST';
+
+            if (idPaciente) {
+                url = `http://localhost:3000/triagem/${idPaciente}`;
+                method = 'PUT';
+            }
+
+            const res = await fetch(url, {
+                method,
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: 'Bearer ' + token,
+                },
+                body: JSON.stringify(dadosFormulario)
+            });
+
+            const json = await res.json();
+
+            if (res.ok) {
+                // Exibe sucesso + diagnóstico da IA (risco e motivo) no campo diagnóstico
+                let textoDiagnostico = '';
+                if (json.diagnostico && typeof json.diagnostico === 'object') {
+                    textoDiagnostico = `Risco: ${json.diagnostico.risco || 'Indefinido'}\nMotivo: ${json.diagnostico.motivo || ''}`;
+                } else if (json.risco) {
+                    textoDiagnostico = `Risco: ${json.risco}\nMotivo: ${json.motivo || ''}`;
+                }
+
+                diagnosticoField.value = textoDiagnostico;
+
+                resultadoDiv.innerHTML = `<p class="success">${idPaciente ? 'Paciente atualizado' : 'Triagem enviada'} com sucesso!</p>`;
+
+                setTimeout(() => window.location.href = 'pesquisar-pacientes.html', 4000);
+            } else {
+                resultadoDiv.innerHTML = `<p class="error">${json.message || 'Erro ao processar.'}</p>`;
+            }
+        } catch (error) {
+            resultadoDiv.innerHTML = `<p class="error">Erro de conexão: ${error.message}</p>`;
+        }
+    });
+});
+</script>
+</body>
+</html>
