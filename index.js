@@ -6,9 +6,11 @@ const path = require('path');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const axios = require('axios');
+const URL_DIAGNOSTICO = process.env.URL_DIAGNOSTICO || 'http://localhost:5000';
+
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const JWT_SECRET = '7g!p2#qR9zX@fV4b^Ws*8LmN3uHdC6Ye';
 
 app.use(cors());
@@ -129,7 +131,7 @@ app.post('/pacientes', autenticarToken, async (req, res) => {
       frequencia_cardiaca: Number(dados.frequenciaCardiaca) || 0,
     };
 
-    const respostaIA = await axios.post('http://localhost:5000/diagnostico', dadosParaIA);
+    const respostaIA = await axios.post(`${URL_DIAGNOSTICO}/diagnostico`, dadosParaIA);
 
     dados.risco = respostaIA.data.risco || 'Indefinido';
     dados.motivo = respostaIA.data.motivo || 'Sem motivo';
@@ -183,5 +185,5 @@ app.get('/pacientes/buscar/:cartaoSUS', autenticarToken, async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`🚀 Servidor rodando em http://localhost:${PORT}`);
+  console.log(`🚀 Servidor rodando na porta ${PORT}`);
 });
