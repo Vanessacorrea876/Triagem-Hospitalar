@@ -32,7 +32,7 @@
             };
 
             // ✅ ROTA CORRIGIDA (sem /cadastrar)
-            const res = await fetch('http://localhost:3000/usuarios', {
+            const res = await fetch('https://triagem-hospitalar-1.onrender.com/cadastro.html', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(dados)
