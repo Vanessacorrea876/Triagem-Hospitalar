@@ -6,8 +6,8 @@ const path = require('path');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const axios = require('axios');
-const URL_DIAGNOSTICO = process.env.URL_DIAGNOSTICO || 'http://localhost:5000';
 
+const URL_DIAGNOSTICO = process.env.URL_DIAGNOSTICO || 'http://localhost:5000';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -70,6 +70,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'formulario.html'));
 });
 
+// ROTA LOGIN CORRIGIDA
 app.post('/login', async (req, res) => {
   const { nome, senha } = req.body;
   if (!nome || !senha) return res.status(400).json({ message: 'Nome e senha são obrigatórios' });
@@ -82,7 +83,7 @@ app.post('/login', async (req, res) => {
     if (!senhaValida) return res.status(400).json({ message: 'Senha incorreta' });
 
     const token = jwt.sign({ nome: usuario.nome, id: usuario._id }, JWT_SECRET, { expiresIn: '1h' });
-    res.json({ token });
+    res.json({ token, nome: usuario.nome });  // <-- retorna token + nome do usuário
   } catch (error) {
     res.status(500).json({ message: 'Erro interno no servidor' });
   }
